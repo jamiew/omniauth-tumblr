@@ -4,7 +4,7 @@ OmniAuth Tumblr
 This gem is an OmniAuth 1.0 Strategy for authenticating with the [Tumblr API](http://developers.tumblr.com)
 
 An example Rails application is available:
-<https://github.com/jamiew/rails-omniauth-app>
+<https://github.com/jamiew/omniauth-rails-app>
 
 
 Usage
