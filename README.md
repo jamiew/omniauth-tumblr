@@ -10,13 +10,12 @@ An example Rails application is available:
 Usage
 -----
 
-Register your application with Tumblr. *Important*: specify a default callback URL or
-Tumblr will throw 400 Bad Request errors. Any URL is fine.
+Register your application with Tumblr. *Important*: you must specify a default callback URL,
+or Tumblr will throw 400 Bad Request errors despite the `?oauth_callback` param. Any URL is fine.
 
-Get started by adding the Tumblr strategy to your `Gemfile` along with Omniauth:
+Get started by adding the Tumblr strategy to your `Gemfile`:
 
 ```ruby
-gem 'omniauth'
 gem 'omniauth-tumblr'
 ```
 
@@ -40,6 +39,7 @@ end
 License
 -------
 
+Copyright (c) 2011 Jamie Wilkinson
+
 This source code released under an MIT license.
 
-(c) 2011 Jamie Wilkinson
