@@ -7,11 +7,19 @@ An example Rails application is available:
 <https://github.com/jamiew/omniauth-rails-app>
 
 
-Usage
+Setup
 -----
 
-Register your application with Tumblr. *Important*: you must specify a default callback URL,
-or Tumblr will throw 400 Bad Request errors despite the `?oauth_callback` param. Any URL is fine.
+Register your application with [Tumblr](http://www.tumblr.com/oauth/apps).
+
+*Important*: your callback URL needs to be specified as `http://[hostname]/auth/tumblr/callback`.
+The Tumblr API does not respect the dynamic ?oauth_callback URL passed by Omniauth. ([related thread](https://groups.google.com/forum/?fromgroups#!searchin/tumblr-api/callback$20url/tumblr-api/5k_afNDUB5s/gfaNMnRtINoJ))
+
+In order to authenticate with Tumblr in both development and production we recommend
+registering a "-dev" app with Tumblr which points at localhost:3000 or yourapp.dev (not ideal)
+
+Usage
+-----
 
 Get started by adding the Tumblr strategy to your `Gemfile`:
 
@@ -39,7 +47,7 @@ end
 License
 -------
 
-Copyright (c) 2011 Jamie Wilkinson
+Copyright (c) 2011-2012 [Jamie Wilkinson](http://jamiedubs.com)
 
 This source code released under an MIT license.
 
