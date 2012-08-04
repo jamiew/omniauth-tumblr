@@ -27,15 +27,8 @@ Get started by adding the Tumblr strategy to your `Gemfile`:
 gem 'omniauth-tumblr'
 ```
 
-Then add the Tumblr strategy to your Rack middleware:
-
-```ruby
-use OmniAuth::Builder do
-  provider :tumblr, ENV['TUMBLR_KEY'], ENV['TUMBLR_SECRET']
-end
-```
-
-In Rails, create a file like @config/initializers/omniauth.com@:
+In a Rails app, add the Tumblr provider to your Omniauth middleware, e.g.
+in a file like @config/initializers/omniauth.rb@:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
@@ -43,6 +36,13 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
+In any Rack app you can add the Tumblr strategy like so:
+
+```ruby
+use OmniAuth::Builder do
+  provider :tumblr, ENV['TUMBLR_KEY'], ENV['TUMBLR_SECRET']
+end
+```
 
 License
 -------
