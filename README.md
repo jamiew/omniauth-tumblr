@@ -18,6 +18,8 @@ The Tumblr API does not respect the dynamic ?oauth_callback URL passed by Omniau
 In order to authenticate with Tumblr in both development and production we recommend
 registering a "-dev" app with Tumblr which points at localhost:3000 or yourapp.dev (not ideal)
 
+Using services like https://ngrok.com works like a charm.
+
 Usage
 -----
 
