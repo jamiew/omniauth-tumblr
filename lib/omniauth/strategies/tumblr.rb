@@ -6,7 +6,7 @@ module OmniAuth
     class Tumblr < OmniAuth::Strategies::OAuth
 
       option :name, 'tumblr'
-      option :client_options, {:site => 'http://www.tumblr.com',
+      option :client_options, {:site => 'https://www.tumblr.com',
                                :request_token_path => "/oauth/request_token",
                                :access_token_path  => "/oauth/access_token",
                                :authorize_path     => "/oauth/authorize"}

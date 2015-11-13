@@ -12,7 +12,7 @@ describe OmniAuth::Strategies::Tumblr do
     end
 
     it 'should have correct site' do
-      subject.options.client_options.site.should eq("http://www.tumblr.com")
+      subject.options.client_options.site.should eq("https://www.tumblr.com")
     end
   end
 end
